@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><div id='tivi'></div></center>
+    <br><br><br>
+    <center>
+        <div id="look-remote">
+            <div id='remote'></div>
+        </div>    
+    </center>
+    <script src="js/Remote.js"></script>
+    <script src="js/Tivi.js"></script>
+    <script>
+        let remote = new Remote();
+        let tivi = new Tivi('VTV1','10');
+        remote.display();
+ 
+        tivi.display();
+
+        function turnOnTivi(){
+            tivi.turnOn();
+            remote.connectTivi(tivi);
+        }
+
+        function turnOffTivi(){
+            tivi.turnOff();
+            remote.disconnectTivi(tivi);
+        }
+
+        function upVolumn(){
+            tivi.upVolumnTivi();
+            remote.connectTivi(tivi);
+        }
+
+        function downVolumn(){
+            tivi.downVolumnTivi();
+            remote.connectTivi(tivi);
+        }
+
+        function leftChanel(){
+            remote.changeLeftChanel();
+            remote.connectTivi(tivi);
+        }
+
+        function rightChanel(){
+            remote.changeLeftChanel();
+            remote.connectTivi(tivi);
+        }
+        
+    </script>
+</body>
+</html>

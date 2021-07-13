@@ -1,0 +1,32 @@
+#display-tivi {
+    width: 500px;
+    height: 250px;
+    background-color: darkgrey;
+    border: 2px solid black;
+}
+
+#look-remote{
+    width: 120px;
+    height: 165px;
+    background-color: red;
+}
+
+tr,td{
+    text-align: center;
+    width: 5px;
+}
+
+#currentVolumn{
+    text-align: left;
+    color: darkgray;
+}
+
+#currentChanel{
+    color: darkgray;
+}
+
+#currentContent{
+    background-size: 500px 200px;
+    width: 500px ;
+    height: 200px;
+}
